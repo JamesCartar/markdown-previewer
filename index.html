@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             fonts and icons                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                         end of fonts and icons                          -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 Body                                    -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="row m-0">
+      <div class="col-10 col-md-7 col-lg-5 editor mx-auto shadow-lg div p-0">
+        <div class="heading">
+          <i class="fa-brands fa-free-code-camp"></i>
+          <p class="mr-auto me-auto">Editor</p>
+          <button>
+            <i
+              class="fa-solid fa-maximize"
+              onclick="handleClick(event)"
+              id="editorIcon"
+            ></i>
+          </button>
+        </div>
+        <textarea
+          id="editor"
+          class="w-100 px-2 m-0 border border-dark"
+          onkeyup="updatePreview()"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row mt-5 mx-0">
+      <div
+        class="col-11 col-md-10 col-lg-8 mx-auto text-black p-0 shadow-lg div preview"
+      >
+        <div class="heading">
+          <i class="fa-brands fa-free-code-camp"></i>
+          <p class="me-auto">Previewer</p>
+          <!-- <i
+            class="fa-solid fa-down-left-and-up-right-to-center"
+            onclick="handleClick()"
+          ></i> -->
+          <button>
+            <i
+              class="fa-solid fa-maximize"
+              id="previewIcon"
+              onclick="handleClick(event)"
+            ></i>
+          </button>
+        </div>
+        <div class="preview px-3 pt-4 border border-dark" id="preview"></div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                        END  Of  Body                                    -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.16/marked.min.js"></script>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
